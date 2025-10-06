@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+/* One File To Rule Them All */
+/* Import Custom CSS Code here from CSS folder */
+
+/* This is an Example */
+@import './css/custom-css-here.css';
+@import './css/variables.css';
+
+
+
+body {
+    font-family: var(--font-family-base);
+}
