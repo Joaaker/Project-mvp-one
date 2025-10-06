@@ -5,7 +5,7 @@ import { WorkoutItem } from "@/components/WorkoutItem";
 import type { WorkoutResponseModel } from "@/types/workout";
 
 const WORKOUTS_ENDPOINT =
-  "https://workout-api-h8aae7hfcaghgvdb.swedencentral-01.azurewebsites.net/api/workout";
+  "https://workout-mvp-1-dsgecddqbdgfcqcz.swedencentral-01.azurewebsites.net/api/workout";
 
 const WorkoutsPage: React.FC = () => {
   const { data, loading, error, refetch } =

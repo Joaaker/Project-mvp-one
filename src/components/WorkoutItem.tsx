@@ -32,7 +32,7 @@ const WorkoutItemComponent: React.FC<WorkoutItemProps> = ({
 
     try {
       const response = await fetch(
-        "https://bookingservice-api-e0e6hed3dca6egak.swedencentral-01.azurewebsites.net/api/Bookings",
+        "https://booking-mvp-1-bsd7e0csehedbwet.swedencentral-01.azurewebsites.net/api/Bookings",
         {
           method: "POST",
           headers: {

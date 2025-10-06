@@ -16,7 +16,7 @@ type SignInForm = {
 };
 
 const API_AUTH_SIGNIN =
-  "https://authservice8-fvgjaehwh5f8d9dq.swedencentral-01.azurewebsites.net/api/Auth/signin";
+  "https://auth-mvp-1-cdczchf0a9bhesd2.swedencentral-01.azurewebsites.net/api/Auth/signin";
 
 const LoginCard: React.FC = () => {
   const { post } = useFetch<unknown>(API_AUTH_SIGNIN, { method: "POST" });

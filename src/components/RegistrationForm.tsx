@@ -14,7 +14,7 @@ import { Spinner } from "@/components/ui/shadcn-io/spinner";
 import { useNavigate } from "react-router-dom";
 
 const API_AUTH_ENDPOINT =
-  "https://authservice8-fvgjaehwh5f8d9dq.swedencentral-01.azurewebsites.net/api/Auth/register";
+  "https://auth-mvp-1-cdczchf0a9bhesd2.swedencentral-01.azurewebsites.net/api/Auth/register";
 
 const RegistrationForm: React.FC = () => {
   const { post } = useFetch<unknown>(API_AUTH_ENDPOINT, { method: "POST" });
@@ -51,25 +51,25 @@ const RegistrationForm: React.FC = () => {
         LastName: formData.LastName.trim(),
         Email: formData.Email.trim(),
         Password: formData.Password,
-        ConfirmPassword: formData.confirmPassword, 
+        ConfirmPassword: formData.confirmPassword,
       };
 
       await post(payload);
 
       toast.success("Registration successful!");
-      reset(); 
+      reset();
       navigate("/signin");
     } catch (err: unknown) {
-
       if (err instanceof HttpError && err.status === 409) {
         setError("Email", { message: "This email is already registered." });
         toast.error("Email is already in use.");
         return;
       }
 
-
       const message =
-        err instanceof Error ? err.message : "Registration failed. Please try again.";
+        err instanceof Error
+          ? err.message
+          : "Registration failed. Please try again.";
       toast.error(message);
     }
   };
